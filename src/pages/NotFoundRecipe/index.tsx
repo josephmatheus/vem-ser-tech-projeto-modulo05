@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { Container, StyledLink } from "./styled";
 
 export const NotFoundPage = () => {
   return (
-    <div>
-      <h1>404: Página não encontrada</h1>
+    <Container>
+      <h1>404: Oops...</h1>
       <p>A receita que você procura não foi encontrada.</p>
-      <Link to="/">Voltar para o inicio</Link>
-    </div>
+      <StyledLink to="/">Voltar para o inicio</StyledLink>
+    </Container>
   );
 };
