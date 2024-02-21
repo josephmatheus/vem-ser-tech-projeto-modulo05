@@ -1,7 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import recipesJson from "../../data/recipes.json";
 import Recipe from "../../types/Recipe";
 import { NotFoundPage } from "../NotFoundRecipe";
+import { useEffect } from "react";
+import Header from "../../components/Header";
 
 export const RecipeDetails = () => {
   const { id } = useParams();
@@ -11,9 +13,18 @@ export const RecipeDetails = () => {
 
   if (!recipe) return <NotFoundPage />;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    document.title = `ReceitApp | ${recipe.title}`;
+
+    return () => {
+      document.title = "ReceitApp | Seu App de Receitas";
+    };
+  }, [recipe.title]);
+
   return (
     <>
-    <Link to="/">Voltar</Link>
+      <Header />
       <div>
         <img src={recipe.image} alt={recipe.title} />
       </div>
