@@ -2,8 +2,9 @@ import { useState } from "react";
 import recipesJson from "../../data/recipes.json";
 import Recipe from "../../types/Recipe";
 import { RecipeCard } from "../RecipeCard";
-import { Input, RecipeListContainer, StyledUl } from "./styled";
-import { IoSearch } from "react-icons/io5";
+import { RecipeListContainer, StyledUl } from "./styled";
+import SearchBar from "../SearchBar";
+
 
 export const RecipeList = () => {
   const { recipes } = recipesJson;
@@ -21,17 +22,7 @@ export const RecipeList = () => {
 
   return (
     <RecipeListContainer>
-      <div className="search-bar-container">
-        <IoSearch color="#592507"  size={24} />
-        <Input
-          type="text"
-          placeholder="Pesquisar receita..."
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-        />
-      </div>
+      <SearchBar search={search} setSearch={setSearch}/>
       <StyledUl>
         {filteredRecipes.map((recipe: Recipe, index: number) => {
           return <RecipeCard key={index} recipe={recipe} />;
