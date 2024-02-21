@@ -1,12 +1,11 @@
-// import { Link } from "react-router-dom"
-
-import { RecipeList } from "../../components/RecipeList"
+import { RecipeList } from "../../components/RecipeList";
+import Header from "../../components/Header";
 
 export const Home = () => {
- 
   return (
     <>
-    <RecipeList />
+      <Header />
+      <RecipeList />
     </>
-  )
-}
+  );
+};
