@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { FaBowlFood } from "react-icons/fa6";
 import Recipe from "../../types/Recipe";
-import { StyledListItem } from "./styled";
+import { StyledListItem, StyledLink } from "./styled";
+import { CiClock2 } from "react-icons/ci";
 
 interface Props {
   recipe: Recipe;
@@ -10,17 +11,16 @@ export const RecipeCard = (props: Props) => {
   const { id, image, title, prepTime, servings } = props.recipe;
   return (
     <StyledListItem>
-      <Link to={`/recipe/${id}`}>
+      <StyledLink to={`/recipe/${id}`}>
         <div className="image-container">
           <img src={image} alt={title} width={300} height={180} />
         </div>
         <div  className="content-container">
-          <h2>{title}</h2>
-          <p>
-            {prepTime} / {servings}
-          </p>
+          <h3>{title}</h3>
+          <p><CiClock2 /> {prepTime}</p>
+          <p><FaBowlFood /> {servings}</p>          
         </div>
-      </Link>
+      </StyledLink>
     </StyledListItem>
   );
 };
