@@ -4,6 +4,7 @@ import Recipe from "../../types/Recipe";
 import { NotFoundPage } from "../NotFoundRecipe";
 import { useEffect } from "react";
 import Header from "../../components/Header";
+import { Container } from "./styled";
 
 export const RecipeDetails = () => {
   const { id } = useParams();
@@ -25,6 +26,7 @@ export const RecipeDetails = () => {
   return (
     <>
       <Header />
+      <Container>
       <div>
         <img src={recipe.image} alt={recipe.title} />
       </div>
@@ -41,6 +43,7 @@ export const RecipeDetails = () => {
           <li key={index}>{step}</li>
         ))}
       </ol>
+      </Container>
     </>
   );
 };
