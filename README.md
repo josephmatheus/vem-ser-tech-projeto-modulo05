@@ -1,6 +1,6 @@
 # ReceitApp
 
-Este é um projeto de conclusão do módulo **[Front End Dinamico🔗](https://github.com/josephmatheus/vem-ser-tech-ifood/blob/main/modulo04-frontend-dinamico)** do curso Vem Ser Tech, um programa Ada Tech em parceria com o iFood.
+Este é um projeto de conclusão do módulo **[React I🔗](https://github.com/josephmatheus/vem-ser-tech-ifood/tree/main/modulo05-react-I)** do curso Vem Ser Tech, um programa Ada Tech em parceria com o iFood.
 O projeto consiste em uma plataforma web onde os usuários podem visualizar uma lista de receitas culinárias. Ele foi desenvolvido como parte do curso de React I.
 
 ## Screenshots 🖼
@@ -11,7 +11,7 @@ O projeto consiste em uma plataforma web onde os usuários podem visualizar uma 
 
 ## Funcionalidades 📝
 
-A aplicação "Pokédex React" oferece as seguintes funcionalidades:
+A aplicação "ReceitApp" oferece as seguintes funcionalidades:
 
 1. **Página Inicial (/):**
 
